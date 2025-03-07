@@ -126,7 +126,11 @@ function Main() {
     singleLinkedList.pasteMaxValues();
 
     singleLinkedList.draw();
+    singleLinkedList.removeNode(2);
     console.log(singleLinkedList.getSize());
     console.log(singleLinkedList.isEmpty())
+    console.log(singleLinkedList.find(2))
+    singleLinkedList.clear();
+    singleLinkedList.draw();
 };
 Main();

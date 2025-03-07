@@ -118,6 +118,7 @@ class DoubleLinkedList {
 };
 function Main() {
     let doubleLinkedList = new DoubleLinkedList();
+    doubleLinkedList.addNode(0);
     doubleLinkedList.addNode(10);
     doubleLinkedList.addNode(20);
     doubleLinkedList.addNode(30);
@@ -126,17 +127,29 @@ function Main() {
     doubleLinkedList.addNode(60);
     doubleLinkedList.addNode(70);
     doubleLinkedList.addNode(80);
+    doubleLinkedList.addNode(90);
+    doubleLinkedList.addNode(100);
+
+    doubleLinkedList.removeNode(0);
+    doubleLinkedList.removeNode(doubleLinkedList.getSize() - 1);
+    doubleLinkedList.removeNode(doubleLinkedList.getSize() - 1);
+
+    console.log(doubleLinkedList.find(4));
 
     let gg = doubleLinkedList.twoIndexes(0, doubleLinkedList.getSize() - 1);
     console.log(gg.firstIndex);
     console.log(gg.secondIndex);
 
     console.log("COPY:")
+    console.log(`LENGTH - ${gg.list.getSize()}`)
+    console.log(`IS EMPTY - ${gg.list.isEmpty()}`)
     gg.list.draw();
 
     console.log("--------------------------");
 
     console.log("ORIGINAL:")
+    console.log(`LENGTH - ${doubleLinkedList.getSize()}`)
+    console.log(`IS EMPTY - ${doubleLinkedList.isEmpty()}`)
     doubleLinkedList.draw();
 }
 Main();
