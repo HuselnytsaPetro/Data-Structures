@@ -5,13 +5,12 @@ function calculateX(x, a, b) {
         result = Math.abs(a * x + b);
     }
 
+    if ((b * x) + 3 < 0) {
+        throw Error("Error: Square root argument must be non-negative!");
+    }
+    
     if (x === 8) {
         let sqrtArgument = (b * x) + 3;
-
-        if (sqrtArgument < 0) {
-            throw Error("Error: Square root argument must be non-negative!");
-        }
-
         result = 5 * Math.sqrt(sqrtArgument);
     }
 

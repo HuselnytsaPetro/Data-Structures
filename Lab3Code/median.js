@@ -19,4 +19,4 @@ function CalculateMedian(array) {
 
     return array.length % 2 !== 0 ? array[Math.floor(array.length / 2)] : (array[array.length / 2] + array[(array.length / 2) - 1]) / 2;
 };
-console.log(CalculateMedian([1, 2, 3, 4, 5, 6, 7]));
+console.log(CalculateMedian([7, 2, 3, 4, 5, 6, 1]));
